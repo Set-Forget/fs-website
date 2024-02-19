@@ -13,7 +13,6 @@ const AppRoutes = () => {
       <Route path="*" element={<NotFoundPage />} />
       {customRoute("", LoginPage, false)}
       {customRoute("home", DashboardPage, true)}
-      {customRoute("settings", SettingsPage, true)}
     </Routes>
   );
 };
