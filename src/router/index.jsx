@@ -4,7 +4,6 @@ import PublicRoute from "./PublicRoute";
 import NotFoundPage from "../pages/notFoundPage";
 import LoginPage from "../pages/loginPage";
 import DashboardPage from "../pages/dashboardPage";
-import SettingsPage from "../pages/settingsPage";
 import { BASE_URL } from "../utils/constants";
 
 const AppRoutes = () => {
