@@ -11,7 +11,6 @@ const GoogleBtn = () => {
     onSuccess: (response) => {
       localStorage.setItem("userData", JSON.stringify(response));
       setUser(response);
-      setLoading(true);
     },
     onError: (error) => {
       console.error(error);

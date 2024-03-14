@@ -4,6 +4,7 @@ import PublicRoute from "./PublicRoute";
 import NotFoundPage from "../pages/notFoundPage";
 import LoginPage from "../pages/loginPage";
 import DashboardPage from "../pages/dashboardPage";
+import PrivacyPolicyPage from "../pages/privacyPolicyPage";
 import { BASE_URL } from "../utils/constants";
 
 const AppRoutes = () => {
@@ -12,6 +13,7 @@ const AppRoutes = () => {
       <Route path="*" element={<NotFoundPage />} />
       {customRoute("", LoginPage, false)}
       {customRoute("home", DashboardPage, true)}
+      {customRoute("privacyPolicy", PrivacyPolicyPage, false)}
     </Routes>
   );
 };
