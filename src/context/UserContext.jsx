@@ -25,6 +25,11 @@ export const UserProvider = ({ children }) => {
         },
       }
     );
+    if (!response.ok) {
+      const errorData = await response.json();
+      console.error(errorData);
+      return;
+  }
     if (!response.ok) return;
     const data = await response.json();
     return data;
@@ -35,7 +40,7 @@ export const UserProvider = ({ children }) => {
     const fetchData = async () => {
       const userData = await fetchUserData(user?.access_token);
       if (!userData) return;
-      sessionStorage.setItem("id", userData.id);
+      sessionStorage.setItem("id", JSON.stringify(userData.id));
       setUser((prev) => ({ ...prev, ...userData }));
     };
     fetchData();

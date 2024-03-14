@@ -4,7 +4,6 @@ import { LoadingContext } from "../../context/LoadingContext";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHouse, faSignOut } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
-import { googleLogout } from "@react-oauth/google";
 
 const Sidebar = () => {
   const { setUser } = useContext(UserContext);
@@ -41,7 +40,6 @@ const Sidebar = () => {
   );
 
   function handleSignOut() {
-    googleLogout();
     localStorage.clear();
     setLoading(false);
     setUser("");
