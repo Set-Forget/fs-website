@@ -21,7 +21,7 @@ const GoogleBtn = () => {
   return (
     <button
       onClick={login}
-      className="flex w-full items-center justify-center gap-3 rounded-full px-6 py-3 text-neutral-800 dark:text-neutral-50 border border-solid focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
+      className="flex w-full items-center justify-center gap-3 rounded-full px-6 py-3 text-neutral-50 border border-solid focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
     >
       <svg
         width="18"
