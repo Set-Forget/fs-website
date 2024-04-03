@@ -9,8 +9,8 @@ const ProtectedRoute = ({ children }) => {
   const { access_token: isAuthenticated } = user;
   const location = useLocation();
 
-  /*if (!isAuthenticated)
-    return <Navigate to="/" state={{ from: location }} replace />;*/
+  if (!isAuthenticated)
+    return <Navigate to="/" state={{ from: location }} replace />;
 
   return <Layout>{children}</Layout>;
 };

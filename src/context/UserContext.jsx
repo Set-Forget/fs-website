@@ -26,11 +26,10 @@ export const UserProvider = ({ children }) => {
       }
     );
     if (!response.ok) {
-      const errorData = await response.json();
-      console.error(errorData);
+      console.error(response);
+      setUser("");
       return;
-  }
-    if (!response.ok) return;
+    }
     const data = await response.json();
     return data;
   }, []);
