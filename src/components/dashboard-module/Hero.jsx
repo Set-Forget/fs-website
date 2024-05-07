@@ -2,7 +2,7 @@ import demo from "../../assets/demo.gif";
 
 const Hero = () => {
   return (
-    <section className="w-full flex flex-col items-center gap-8 mt-8 text-white">
+    <section className="w-full flex flex-col items-center gap-8 mt-8 mb-4 text-white">
       <div className="flex items-center justify-center">
         <p className="text-8xl leading-[106px] font-black bg-green-gradient bg-clip-text text-transparent">{`{`}</p>
         <h1 className="text-8xl font-bold">&nbsp;Formula Studio&nbsp;</h1>
@@ -19,7 +19,7 @@ const Hero = () => {
         <a
           href="https://sheets.new"
           target="_blank"
-          className="font-semibold text-lg flex gap-2 items-center"
+          className="font-semibold text-lg flex gap-2 items-center underline"
         >
           <LogoSheet />
           Google Sheets
@@ -27,7 +27,7 @@ const Hero = () => {
         <a
           href="https://onedrive.live.com/"
           target="_blank"
-          className="font-semibold text-lg flex gap-2 items-center"
+          className="font-semibold text-lg flex gap-2 items-center underline"
         >
           <LogoExcel />
           OneDrive Excel
@@ -35,7 +35,7 @@ const Hero = () => {
         <a
           href="https://www.notion.so/"
           target="_blank"
-          className="font-semibold text-lg flex gap-2 items-center"
+          className="font-semibold text-lg flex gap-2 items-center underline"
         >
           <LogoNotion />
           Notion
