@@ -8,11 +8,7 @@ const Hero = () => {
         <h1 className="text-8xl font-bold">&nbsp;Formula Studio&nbsp;</h1>
         <p className="text-8xl leading-[106px] font-black bg-green-gradient bg-clip-text text-transparent">{`}`}</p>
       </div>
-      <p className="text-base text-white font-normal">
-        Create and edit formulas seamlessly with chat GPT. Supported on Google
-        Sheets, Excel Online and Notion
-      </p>
-      <h2 className="text-4xl font-semibold bg-[#29B367] py-5 px-10 rounded-full leading-10">
+      <h2 className="text-4xl font-semibold bg-[#29B367] py-5 px-10 rounded-full leading-10 mb-12">
         Code formulas with Chat GPT {`{ }`}
       </h2>
       <div className="flex w-1/2 justify-between">
@@ -41,7 +37,44 @@ const Hero = () => {
           Notion
         </a>
       </div>
-      <img src={demo} width={500} height={700} alt="demo example" />
+      <ul>
+        <li className="my-1">
+          <span>&#9989;</span>
+          <span>&nbsp;&nbsp;Download the extension</span>
+        </li>
+        <li className="my-1">
+          <span>&#9989;</span>
+          <span>&nbsp;&nbsp;Create a user</span>
+        </li>
+        <li className="my-1 flex">
+          <span>&#9989;</span>
+          <span className="flex">
+            <p>&nbsp;&nbsp;Go to one of these tools &nbsp;</p>
+            <a href="https://sheets.new" className="underline">
+              Sheets
+            </a>
+            ,&nbsp;
+            <a href="https://onedrive.live.com/" className="underline">
+              Excel
+            </a>
+            ,&nbsp;
+            <a href="https://www.notion.so/" className="underline">
+              Notion
+            </a>
+            &nbsp; and locate the button logo{" "}
+            <img src="https://lh3.googleusercontent.com/Yfp8PlYC6FyV8jg4A8wXgiuUEG13jsN-VWwgoy66ylV0vuYHd_tGP9cv018Y2fkqLf94HYE33-cB2ig0pFa98CJzgw=s24" className="mx-1" />{" "}
+            on the bottom right of your screen.
+          </span>
+        </li>
+        <li className="my-1">
+          <span>&#9989;</span>
+          <span>
+            &nbsp;&nbsp;Ask Chat GPT to create any formula on the editor and
+            press SHIFT + ENTER
+          </span>
+        </li>
+      </ul>
+      <img src={demo} width={300} height={500} alt="demo example" />
     </section>
   );
 };
