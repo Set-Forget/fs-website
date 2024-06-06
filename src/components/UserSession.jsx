@@ -1,7 +1,7 @@
-import { useContext } from "react";
-import { UserContext } from "../context/UserContext";
-import { googleLogout } from "@react-oauth/google";
-import { Popover } from "@headlessui/react";
+import { useContext } from 'react';
+import { UserContext } from '../context/UserContext';
+import { googleLogout } from '@react-oauth/google';
+import { Popover } from '@headlessui/react';
 
 export default function UserSession() {
   const { user, setUser } = useContext(UserContext);
@@ -19,7 +19,7 @@ export default function UserSession() {
         {user.name}
       </span>
       <Popover className="relative">
-        <Popover.Button className="relative left-[4px] top-[2px]">
+        <Popover.Button className="flex items-center justify-center ml-2 outline-none">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -35,29 +35,24 @@ export default function UserSession() {
             />
           </svg>
         </Popover.Button>
-        <Popover.Panel className="absolute z-10 bg-white text-slate-700 p-1 rounded-lg right-0 top-10 w-32">
-          <div className="grid grid-cols-1 truncate">
-            <button
-              className="items-center gap-3 !justify-start bg-transparent !outline-none flex"
-              onClick={logOut}
+        <Popover.Panel className="absolute z-10 bg-white text-slate-700 p-1 rounded-lg right-0 top-10 py-2 px-4">
+          <button className="flex gap-2 hover:text-slate-500" onClick={logOut}>
+            Logout
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={1.5}
+              stroke="currentColor"
+              className="size-6"
             >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                strokeWidth="1.5"
-                stroke="currentColor"
-                className="w-5 h-5"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M15.75 9V5.25A2.25 2.25 0 0 0 13.5 3h-6a2.25 2.25 0 0 0-2.25 2.25v13.5A2.25 2.25 0 0 0 7.5 21h6a2.25 2.25 0 0 0 2.25-2.25V15M12 9l-3 3m0 0 3 3m-3-3h12.75"
-                />
-              </svg>
-              Logout
-            </button>
-          </div>
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M15.75 9V5.25A2.25 2.25 0 0 0 13.5 3h-6a2.25 2.25 0 0 0-2.25 2.25v13.5A2.25 2.25 0 0 0 7.5 21h6a2.25 2.25 0 0 0 2.25-2.25V15m3 0 3-3m0 0-3-3m3 3H9"
+              />
+            </svg>
+          </button>
         </Popover.Panel>
       </Popover>
     </div>

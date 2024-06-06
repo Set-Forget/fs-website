@@ -1,80 +1,166 @@
-import demo from "../../assets/demo.gif";
+import demo from '../../assets/demo.gif';
+import './animations.css';
 
 const Hero = () => {
   return (
-    <section className="w-full flex flex-col items-center gap-8 mt-8 mb-4 text-white">
-      <div className="flex items-center justify-center">
-        <p className="text-8xl leading-[106px] font-black bg-green-gradient bg-clip-text text-transparent">{`{`}</p>
-        <h1 className="text-8xl font-bold">&nbsp;Formula Studio&nbsp;</h1>
-        <p className="text-8xl leading-[106px] font-black bg-green-gradient bg-clip-text text-transparent">{`}`}</p>
+    <section className="w-full flex flex-col items-center my-20 text-white">
+      <div className="flex items-center justify-center mb-20 select-none">
+        <p className="text-6xl md:text-8xl leading-[80px] md:leading-[106px] font-black bg-green-gradient bg-clip-text text-transparent animate-curly-left">{`{`}</p>
+        <h1 className="text-6xl md:text-8xl font-bold animate-text-appear">
+          &nbsp;Formula Studio&nbsp;
+        </h1>
+        <p className="text-6xl md:text-8xl leading-[80px] md:leading-[106px] font-black bg-green-gradient bg-clip-text text-transparent animate-curly-right">{`}`}</p>
       </div>
-      <h2 className="text-4xl font-semibold bg-[#29B367] py-5 px-10 rounded-full leading-10 mb-12">
-        Code formulas with Chat GPT {`{ }`}
+
+      <h2 className="text-4xl md:text-5xl font-semibold bg-[#29B367] py-5 px-10 rounded leading-10 mb-5">
+        Save Time, Work Smarter
       </h2>
-      <div className="flex w-1/2 justify-between">
-        <a
-          href="https://sheets.new"
-          target="_blank"
-          className="font-semibold text-lg flex gap-2 items-center underline"
-        >
-          <LogoSheet />
-          Google Sheets
-        </a>
-        <a
-          href="https://onedrive.live.com/"
-          target="_blank"
-          className="font-semibold text-lg flex gap-2 items-center underline"
-        >
-          <LogoExcel />
-          OneDrive Excel
-        </a>
-        <a
-          href="https://www.notion.so/"
-          target="_blank"
-          className="font-semibold text-lg flex gap-2 items-center underline"
-        >
-          <LogoNotion />
-          Notion
-        </a>
-      </div>
-      <ul>
-        <li className="my-1">
-          <span>&#9989;</span>
-          <span>&nbsp;&nbsp;Download the extension</span>
-        </li>
-        <li className="my-1">
-          <span>&#9989;</span>
-          <span>&nbsp;&nbsp;Create a user</span>
-        </li>
-        <li className="my-1 flex">
-          <span>&#9989;</span>
-          <span className="flex">
-            <p>&nbsp;&nbsp;Go to one of these tools &nbsp;</p>
-            <a href="https://sheets.new" className="underline">
-              Sheets
+      <h4 className="text-2xl mb-20 w-[400px] text-center leading-10">
+        Instantly generate formulas with ChatGPT, right where you need them.
+      </h4>
+      <div className="flex items-center justify-center flex-col gap-4 mb-20">
+        <h5 className="text-xl">
+          Start{' '}
+          <span className="font-black bg-green-gradient bg-clip-text text-transparent">
+            Now
+          </span>
+          :
+        </h5>
+        <div className="flex gap-12">
+          <div className="flex gap-2">
+            <LogoSheet />
+            <a
+              href="https://sheets.new"
+              target="_blank"
+              className="font-medium text-lg flex gap-2 items-center transition-all relative after:absolute after:bottom-[-4px] after:left-0 after:h-[2px] after:w-full after:bg-white after:transition-colors after:duration-300 after:ease-[cubic-bezier(0.65_0.05_0.36_1)] text-white self-start after:scale-x-100 hover:text-gray-200 hover:after:bg-gray-200"
+            >
+              Google Sheets
             </a>
-            ,&nbsp;
-            <a href="https://onedrive.live.com/" className="underline">
-              Excel
+          </div>
+          <div className="flex gap-2">
+            <LogoExcel />
+            <a
+              href="https://onedrive.live.com/"
+              target="_blank"
+              className="font-medium text-lg flex gap-2 items-center transition-all relative after:absolute after:bottom-[-4px] after:left-0 after:h-[2px] after:w-full after:bg-white after:transition-colors after:duration-300 after:ease-[cubic-bezier(0.65_0.05_0.36_1)] text-white self-start after:scale-x-100 hover:text-gray-200 hover:after:bg-gray-200"
+            >
+              OneDrive Excel
             </a>
-            ,&nbsp;
-            <a href="https://www.notion.so/" className="underline">
+          </div>
+          <div className="flex gap-2">
+            <LogoNotion />
+            <a
+              href="https://www.notion.so/"
+              target="_blank"
+              className="font-medium text-lg flex gap-2 items-center transition-all relative after:absolute after:bottom-[-4px] after:left-0 after:h-[2px] after:w-full after:bg-white after:transition-colors after:duration-300 after:ease-[cubic-bezier(0.65_0.05_0.36_1)] text-white self-start after:scale-x-100 hover:text-gray-200 hover:after:bg-gray-200"
+            >
               Notion
             </a>
-            &nbsp; and locate the button logo{" "}
-            <img src="https://lh3.googleusercontent.com/Yfp8PlYC6FyV8jg4A8wXgiuUEG13jsN-VWwgoy66ylV0vuYHd_tGP9cv018Y2fkqLf94HYE33-cB2ig0pFa98CJzgw=s24" className="mx-1" />{" "}
-            on the bottom right of your screen.
-          </span>
-        </li>
-        <li className="my-1">
-          <span>&#9989;</span>
-          <span>
-            &nbsp;&nbsp;Ask Chat GPT to create any formula on the editor and
-            press SHIFT + ENTER
-          </span>
-        </li>
-      </ul>
-      <img src={demo} width={300} height={500} alt="demo example" />
+          </div>
+        </div>
+      </div>
+
+      <div className="flex flex-col md:flex-row items-center gap-10 ">
+        <ul>
+          <li>
+            <div className="flex items-center mb-4 md:mb-6 gap-4">
+              <input
+                id="default-checkbox"
+                type="checkbox"
+                checked
+                style={{ accentColor: '#29B367' }}
+                className="w-4 h-4 text-medium bg-gray-100 border-gray-300 rounded "
+              />
+              <span className="text-base md:text-lg lg:text-xl">Download the extension</span>
+            </div>
+          </li>
+          <li>
+            <div className="flex items-center mb-4 md:mb-6 gap-4">
+              <input
+                id="default-checkbox"
+                type="checkbox"
+                checked
+                style={{ accentColor: '#29B367' }}
+                className="w-4 h-4 text-medium bg-gray-100 border-gray-300 rounded "
+              />
+              <span className="text-base md:text-lg lg:text-xl">Create a user</span>
+            </div>
+          </li>
+          <li>
+            <div className="flex items-center mb-4 md:mb-6 gap-4">
+              <input
+                id="default-checkbox"
+                type="checkbox"
+                style={{ accentColor: '#29B367' }}
+                className="w-4 h-4 text-medium bg-gray-100 border-gray-300 rounded "
+              />
+              <span className="text-base md:text-lg lg:text-xlflex">
+                Go to one of these tools&nbsp;
+                <a
+                  href="https://sheets.new"
+                  className="relative bg-[linear-gradient(#fff,#fff),linear-gradient(#34C759,#34C759)] bg-[length:100%_2px,0_2px] bg-[position:100%_100%,0_100%] bg-no-repeat text-white transition-[background-size,color] duration-500 hover:bg-[0_2px,100%_2px] hover:text-[#34C759]"
+                >
+                  Sheets
+                </a>
+                ,&nbsp;
+                <a
+                  href="https://onedrive.live.com/"
+                  className="relative bg-[linear-gradient(#fff,#fff),linear-gradient(#29B367,#29B367)] bg-[length:100%_2px,0_2px] bg-[position:100%_100%,0_100%] bg-no-repeat text-white transition-[background-size,color] duration-500 hover:bg-[0_2px,100%_2px] hover:text-[#29B367]"
+                >
+                  Excel
+                </a>
+                ,&nbsp;
+                <a
+                  href="https://www.notion.so/"
+                  className="relative bg-[linear-gradient(#fff,#fff),linear-gradient(#787774,#787774)] bg-[length:100%_2px,0_2px] bg-[position:100%_100%,0_100%] bg-no-repeat text-white transition-[background-size,color] duration-500 hover:bg-[0_2px,100%_2px] hover:text-[#787774]"
+                >
+                  Notion
+                </a>
+              </span>
+            </div>
+          </li>
+          <li>
+            <div className="flex items-center mb-4 md:mb-6 gap-4">
+              <input
+                id="default-checkbox"
+                type="checkbox"
+                style={{ accentColor: '#29B367' }}
+                className="w-4 h-4 text-medium bg-gray-100 border-gray-300 rounded "
+              />
+              <span className="text-base md:text-lg lg:text-xl flex">
+                Locate the Formula Studio button{' '}
+                <img
+                  src="src/assets/formula-logo.png"
+                  className="mx-1 w-[30px] h-[30px] rounded-full"
+                />
+                on the bottom right of your screen
+              </span>
+            </div>
+          </li>
+          <li>
+            <div className="flex items-center mb-4 md:mb-6 gap-4">
+              <input
+                id="default-checkbox"
+                type="checkbox"
+                style={{ accentColor: '#29B367' }}
+                className="w-4 h-4 text-medium bg-gray-100 border-gray-300 rounded "
+              />
+              <span className="text-base md:text-lg lg:text-xl">
+                Ask Chat GPT to create any formula on the editor and press SHIFT
+                + ENTER
+              </span>
+            </div>
+          </li>
+        </ul>
+        <img
+          src={demo}
+          width={300}
+          height={500}
+          alt="demo example"
+          className="rounded border border-gray-600 shadow-lg"
+  style={{ boxShadow: '10px 10px 10px rgba(41, 179, 103, 0.3)' }}
+        />
+      </div>
     </section>
   );
 };
