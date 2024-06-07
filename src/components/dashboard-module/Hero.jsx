@@ -1,8 +1,9 @@
 import demo from '../../assets/demo.gif';
+import logo from '../../assets/formula-logo.png'
 import './animations.css';
 
 const Hero = () => {
-  // hola
+
   return (
     <section className="w-full flex flex-col items-center my-20 text-white">
       <div className="flex items-center justify-center mb-20 select-none">
@@ -72,7 +73,7 @@ const Hero = () => {
                 style={{ accentColor: '#29B367' }}
                 className="w-4 h-4 text-medium bg-gray-100 border-gray-300 rounded "
               />
-              <span className="text-base md:text-lg lg:text-xl">
+              <span className="text-base md:text-lg lg:text-xl text-gray-400">
                 Download the extension
               </span>
             </div>
@@ -86,7 +87,7 @@ const Hero = () => {
                 style={{ accentColor: '#29B367' }}
                 className="w-4 h-4 text-medium bg-gray-100 border-gray-300 rounded "
               />
-              <span className="text-base md:text-lg lg:text-xl">
+              <span className="text-base md:text-lg lg:text-xl text-gray-400">
                 Create a user
               </span>
             </div>
@@ -99,7 +100,7 @@ const Hero = () => {
                 style={{ accentColor: '#29B367' }}
                 className="w-4 h-4 text-medium bg-gray-100 border-gray-300 rounded "
               />
-              <span className="text-base md:text-lg lg:text-xlflex">
+              <span className="text-base md:text-lg lg:text-xl flex">
                 Go to one of these tools&nbsp;
                 <a
                   href="https://sheets.new"
@@ -135,7 +136,7 @@ const Hero = () => {
               <span className="text-base md:text-lg lg:text-xl flex">
                 Locate the Formula Studio button{' '}
                 <img
-                  src="src/assets/formula-logo.png"
+                  src={logo}
                   className="mx-1 w-[30px] h-[30px] rounded-full"
                 />
                 on the bottom right of your screen
