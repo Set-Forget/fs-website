@@ -2,6 +2,7 @@ import demo from '../../assets/demo.gif';
 import './animations.css';
 
 const Hero = () => {
+  // hola
   return (
     <section className="w-full flex flex-col items-center my-20 text-white">
       <div className="flex items-center justify-center mb-20 select-none">
@@ -71,7 +72,9 @@ const Hero = () => {
                 style={{ accentColor: '#29B367' }}
                 className="w-4 h-4 text-medium bg-gray-100 border-gray-300 rounded "
               />
-              <span className="text-base md:text-lg lg:text-xl">Download the extension</span>
+              <span className="text-base md:text-lg lg:text-xl">
+                Download the extension
+              </span>
             </div>
           </li>
           <li>
@@ -83,7 +86,9 @@ const Hero = () => {
                 style={{ accentColor: '#29B367' }}
                 className="w-4 h-4 text-medium bg-gray-100 border-gray-300 rounded "
               />
-              <span className="text-base md:text-lg lg:text-xl">Create a user</span>
+              <span className="text-base md:text-lg lg:text-xl">
+                Create a user
+              </span>
             </div>
           </li>
           <li>
@@ -158,7 +163,7 @@ const Hero = () => {
           height={500}
           alt="demo example"
           className="rounded border border-gray-600 shadow-lg"
-  style={{ boxShadow: '10px 10px 10px rgba(41, 179, 103, 0.3)' }}
+          style={{ boxShadow: '10px 10px 10px rgba(41, 179, 103, 0.3)' }}
         />
       </div>
     </section>
